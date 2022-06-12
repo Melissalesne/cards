@@ -1,0 +1,157 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Joan', serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(218,218,218);
+}
+
+.cards{
+    background: #f1f1f1;
+    width: 300px;
+    height: 550px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    margin:0 25px;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.6);
+}
+
+.img1{
+    background: url(./images/tshirt1.jpg);
+}
+.img2{
+    background: url(./images/manteau1.jpg);
+}
+.img3{
+    background: url(./images/tshirt2.jpg);
+}
+
+.partImg{
+    height: 65%;
+    width: 100%;
+    background-position: top;
+    position:relative;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.filtre{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition:background 0.4s ease;
+}
+
+.filtre:hover{
+    cursor:pointer;
+    background: rgba(248, 112, 219, 0.5);
+}
+
+.btnBuy{
+    width: 100px;
+    height: 40px;
+    background: #f1f1f1;
+    border-radius: 5px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(248, 112, 219, 0.5);
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    opacity: 0;/*n'ai plus visible*/
+}
+.filtre:hover .btnBuy{
+    opacity: 1;/*visible au survol*/
+}
+.titlePrice{
+    padding: 10px;
+    width: 100%;
+    display: flex;
+
+}
+.titleCards{
+    display:flex;
+    align-items: center;
+    margin:0;
+    width: 60%;
+    font-size: 25px;
+    position: relative;
+}
+.titleCards::after{
+    content:"tee shirt blanc basic";
+    font-weight: 200;
+    font-size: 15px;
+    position: absolute;
+    top:45px;
+}
+.price{
+    width: 20%;
+    font-size: 18px;
+}
+.sizes{
+    padding: 3px 10px;
+    width: 100%;
+}
+.sizesTxt{
+    margin:0;
+    font-weight: bold;
+    position:relative;
+    font-size: 18px;
+}
+.sizesTxt::after{
+    content:"S, M, L, XL";
+    font-weight: 100;
+    font-size: 16px;
+    position:absolute;
+    top:20px;
+    left:0;
+}
+.colors{
+    padding:20px 10px;
+    width: 100%;
+}
+.subtitleC{
+    padding-bottom: 5px;
+    font-size: 20px;
+    margin:0;
+}
+.contRonds{
+    width: 100%;
+    display:flex;
+}
+
+.ronds{
+    height:30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+    cursor:pointer;
+}
+.ronds:nth-child(1){
+    background: #000;
+}
+.ronds:nth-child(2){
+    background: #9b9b9b;
+}
+.ronds:nth-child(3){
+    background: #fff;
+    border: 0.1px solid rgba(0,0,0,0.6);
+}
+.ronds:nth-child(4){
+    background: pink;
+}
+.ronds:nth-child(5){
+    background: red;
+}
